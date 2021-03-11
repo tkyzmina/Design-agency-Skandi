@@ -1,5 +1,7 @@
 @mixin retina {
-  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+
+  @media (min-resolution: $retina-dpi),
+  (min-resolution: $retina-dppx) {
     @content;
   }
 }
@@ -30,28 +32,26 @@
   }
 }
 
-// Mobile first
+// Typography
 
-/* @mixin viewport--md {
-  @media (min-width: $viewport--md) {
-    @content;
+// - для шрифтов > 14px
+@mixin font-scale($fs) {
+  font-size: #{$fs}px;
+
+  @include viewport--md {
+    font-size: calc(0.85 * #{$fs}px);
+  }
+
+  @include viewport--sm {
+    font-size: calc(0.7 * #{$fs}px);
   }
 }
 
-@mixin viewport--lg {
-  @media (min-width: $viewport--lg) {
-    @content;
+// - для шрифтов < 14px
+@mixin font-scale-sm($fs) {
+  font-size: #{$fs}px;
+
+  @include viewport--sm {
+    font-size: calc(0.85 * #{$fs}px);
   }
 }
-
-@mixin viewport--xl {
-  @media (min-width: $viewport--xl) {
-    @content;
-  }
-}
-
-@mixin viewport--xxl {
-  @media (min-width: $viewport--xxl) {
-    @content;
-  }
-} */

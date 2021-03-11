@@ -20,19 +20,19 @@ body {
 
   font-style: normal;
   font-weight: 400;
-  font-size: 16px;
-  line-height: 24px;
-  font-family: $font-family--;
-  color: $color-default-black;
+  font-size: 18px;
+  line-height: 167%;
+  font-family: $font-family--main;
+  color: $color-cab-sav;
 
-  background-color: $color-default-white;
+  background-color: $color-wisp-pink;
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 a {
-  color: $color-default-black;
+  color: $color-cab-sav;
   text-decoration: none;
 }
 
@@ -79,6 +79,7 @@ select {
 
 // ie11 X removal
 input {
+
   &::-ms-clear,
   &::-ms-reveal {
     display: none;

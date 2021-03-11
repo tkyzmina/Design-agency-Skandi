@@ -122,9 +122,26 @@ const clean = () => {
   return del('build');
 };
 
+const cleanPages = () => {
+  return del('docs');
+};
+
+const pages = () => {
+  return gulp.src([
+    'build/**/**'
+  ], {
+    base: 'build',
+  })
+      .pipe(gulp.dest('docs'));
+};
+
+
 const build = gulp.series(clean, svgo, copy, css, sprite, js, html);
 
 const start = gulp.series(build, syncserver);
+
+const print = gulp.series(cleanPages, pages);
+
 
 // Optional tasks
 //---------------------------------
@@ -147,5 +164,6 @@ const optimizeImages = () => {
 
 exports.build = build;
 exports.start = start;
+exports.print = print;
 exports.webp = createWebp;
 exports.imagemin = optimizeImages;

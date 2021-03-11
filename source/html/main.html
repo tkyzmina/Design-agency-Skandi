@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
 
   @@include("source/html/base/head.html")
   <title>ProjectName — Главная</title>
 
 </head>
+
 <body>
 
   <div style="display: none;">
@@ -14,31 +16,57 @@
 
   <div class="wrapper">
     @@include("source/html/base/header.html", {
-      "main": true
+    "main": true
     })
 
-    <main>
+    <main class="main">
       <div class="container">
-        <p><a href="#" data-modal="feedback">modal--feedback link</a></p>
-        <p><a href="#" data-modal="success">modal--success link</a></p>
+        <section class="moto">
+          <h1 class="moto__header">Поможем сделать
+            вашу квартиру
+            уютнее</h1>
+          <p class="moto__text">Подбираем текстиль, мебель и аксессуары
+            под ваш интерьер, находим магазины
+            и помогаем организовать доставку</p>
+          <a class="btn" href="#">Оставить заявку</a>
+        </section>
+        <section class="about">
+          <h2 class="about__header block-header">О нас</h2>
+          <div class="about__wrapper">
+            <div class="about__img">
+              <img src="img/content/about@1x.png" srcset="img/content/about@2x.png 2x" width="445" height="465"
+                alt="Изображение декоративной вазы с цветами">
+            </div>
+            <div class="about__text">
+              <p>Премиальный европейский текстиль&nbsp;&mdash; одно из&nbsp;самых главных направлений работы коллектива.
+                Создавать неповторимые интерьеры для наших дорогих клиентов, уделяя внимание мельчайшим
+                деталям&nbsp;&mdash; вот&nbsp;то, что по-настоящему вдохновляет дизайнеров нашей студии.</p>
+              <p>Наш коллектив сделает все, чтобы после сотрудничества с&nbsp;нами, Вам было приятно сказать:
+                &quot; Да! Это именно&nbsp;то, что действительно достойно моего дома!&quot;</p>
+            </div>
+
+          </div>
+        </section>
       </div>
+
     </main>
 
     @@include("source/html/base/footer.html")
 
     @@include("source/html/base/modal.html", {
-      "name": "feedback"
+    "name": "feedback"
     })
 
     @@include("source/html/base/modal.html", {
-      "name": "success",
-      "fitContent": true,
-      "noScale": true,
-      "mod": "some-mod"
+    "name": "success",
+    "fitContent": true,
+    "noScale": true,
+    "mod": "some-mod"
     })
   </div>
 
   <script src="js/vendor.min.js"></script>
   <script src="js/main.min.js"></script>
 </body>
+
 </html>

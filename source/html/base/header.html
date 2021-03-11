@@ -1,28 +1,45 @@
-<header class="header @@if (context.mod) { header--@@mod }">
-  <div class="header__wrapper">
-    <a class="header__logo" @@if (!context.main) { href="main.html"} aria-label="Переход на главную">
-      Логотип
-    </a>
+<!-- <svg width="91" height="25">
+      <use xlink:href="#icon-logo"></use>
+    </svg> -->
 
-    <nav class="main-nav">
-      <button class="main-nav__toggle btn-reset" type="button" aria-label="Переключатель отображения меню" aria-pressed="false">
-        <svg width="20" height="20">
-          <use xlink:href="#icon-burger"></use>
-        </svg>
-      </button>
-      <div class="main-nav__wrapper">
-        <ul class="main-nav__list">
-          <li class="main-nav__item">
-            <a class="main-nav__link @@if (context.headerActiveLinkIndex === 0) { main-nav__link--active }" @@if (context.headerActiveLinkIndex !== 0) { href="#" }>Страница 1</a>
-          </li>
-          <li class="main-nav__item">
-            <a class="main-nav__link @@if (context.headerActiveLinkIndex === 1) { main-nav__link--active }" @@if (context.headerActiveLinkIndex !== 1) { href="#" }>Страница 2</a>
-          </li>
-          <li class="main-nav__item">
-            <a class="main-nav__link @@if (context.headerActiveLinkIndex === 2) { main-nav__link--active }" @@if (context.headerActiveLinkIndex !== 2) { href="#" }>Страница 3</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
+<header class="header">
+  <div class="container">
+    <div class="header__wrapper">
+      <a class="header__logo" @@if(!context.main) { href="main.html" } aria-label="Переход на главную">
+        <img class="about__bg" src="img/content/logo@1x.png" srcset="img/content/logo@2x.png 2x" width="91" height="25"
+          alt="Логотип агенства SKANDI">
+      </a>
+      <nav class="main-nav">
+        <button class="main-nav__toggle btn-reset" type="button" aria-label="Переключатель отображения меню"
+          aria-pressed="false">
+          <span></span>
+        </button>
+        <div class="main-nav__wrapper">
+          <ul class="main-nav__list">
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="#">О компании</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="#">Портфолио</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="#">Команда</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="#">Как мы работаем</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="#">Отзывы клиентов</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="#">Оставить заявку</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="tel:+79818574624"><span>+7 (981) 857-46-24</span></a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
   </div>
 </header>
