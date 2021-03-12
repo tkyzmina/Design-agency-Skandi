@@ -1,0 +1,8 @@
+.block-header {
+  margin: 0;
+
+  @include font-scale(40);
+  line-height: 125%;
+  font-weight: 400;
+  text-transform: uppercase;
+}

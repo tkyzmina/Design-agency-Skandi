@@ -1,6 +1,7 @@
 .moto {
   width: 50%;
-  padding-top: 89px;
+  margin-bottom: 170px;
+  padding-top: 82px;
   padding-left: 84px;
 
   @include viewport--md {
@@ -22,15 +23,15 @@
 
   &__text {
     margin: 0;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
   }
 }
 
 .main {
-  margin-top: -63px;
-  background-image: url("../img/content/top-bg@1x.png");
-  background-repeat: no-repeat;
-  background-position: top center;
-  background-size: cover;
-  z-index: -1;
+  // margin-top: -63px;
+  // background-image: url("../img/content/top-bg@1x.png");
+  // background-repeat: no-repeat;
+  // background-position: top center;
+  // background-size: cover;
+  // z-index: -1;
 }
